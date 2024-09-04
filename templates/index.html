@@ -17,8 +17,44 @@
 <body>
 
     <!-- Main Content -->
-    <h1>Heading</h1>
-    <p>Stuff goes here</p>
+    <div id="card">
+
+        <h1 id="product-name">NAME</h1>
+        <p id="product-type">Product Type:</p>
+        <p id="Description">Description:</p>
+        <p>Ingredients</p>
+        <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+        <p id="price">Price:</p>
+        <p id="url">URL:</p>
+
+        <div id="button-row">
+
+            <button onclick="reject()" id="reject-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14">
+                    <g id="delete">
+                        <path fill-rule="evenodd"
+                            d="M1.70711 0.292893c-0.39053 -0.3905241 -1.023693 -0.3905241 -1.414217 0 -0.3905241 0.390524 -0.3905241 1.023687 0 1.414217L5.58579 7 0.292893 12.2929c-0.3905241 0.3905 -0.3905241 1.0237 0 1.4142 0.390524 0.3905 1.023687 0.3905 1.414217 0L7 8.41421l5.2929 5.29289c0.3905 0.3905 1.0237 0.3905 1.4142 0 0.3905 -0.3905 0.3905 -1.0237 0 -1.4142L8.41421 7l5.29289 -5.29289c0.3905 -0.39053 0.3905 -1.023693 0 -1.414217 -0.3905 -0.3905241 -1.0237 -0.3905241 -1.4142 0L7 5.58579 1.70711 0.292893Z"
+                            clip-rule="evenodd" stroke-width="1"></path>
+                    </g>
+                </svg>
+            </button>
+
+            <button onclick="accept()" id="accept-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="14" width="14">
+                    <g id="check">
+                        <path fill-rule="evenodd"
+                            d="M13.637 1.198a1 1 0 0 1 0.134 1.408l-8.04 9.73 -0.003 0.002a1.922 1.922 0 0 1 -1.5 0.693 1.923 1.923 0 0 1 -1.499 -0.748l-0.001 -0.002L0.21 9.045a1 1 0 1 1 1.578 -1.228l2.464 3.167 7.976 -9.652a1 1 0 0 1 1.408 -0.134Z"
+                            clip-rule="evenodd" stroke-width="1"></path>
+                    </g>
+                </svg>
+            </button>
+        </div>
+
+    </div>
 
     <!-- Java Script Link -->
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>

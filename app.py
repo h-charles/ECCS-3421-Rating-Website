@@ -1,7 +1,7 @@
 # /app.py
 # Server Code
 
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from datetime import datetime
 
 # ====================== #
@@ -14,10 +14,19 @@ app = Flask( __name__ )
 # Website Routes         #
 # ====================== #
 
+# home page
 @app.route( '/' )
 def index():
     server_log( 'index', 'Rendering Main index.html')
     return render_template( 'index.html' )
+
+# data read in
+@app.route( '/read/<row>' )
+def read_data( row ):
+    
+    data = 0
+    
+    return jsonify( data )
 
 # ====================== #
 # Helper Functions       #

@@ -4,5 +4,13 @@
 // Global Declarations
 
 // Main Code
+function reject() {
+
+}
+
+function accept() {
+
+}
+
 
 // Helper Functions
