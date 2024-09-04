@@ -17,3 +17,35 @@ body {
     background-color: var(--primary-background);
     color: var(--text);
 }
+
+#card {
+    padding: 15px;
+    border: 5px solid var(--text);
+    border-radius: 5px;
+}
+
+p {
+    color: var(--text);
+}
+
+ul {}
+
+li {
+    color: var(--text);
+}
+
+#button-row {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+button {
+    color: var(--text);
+    width: 50px;
+    padding: 5px;
+}
+
+svg {
+    fill: var(--text);
+}
