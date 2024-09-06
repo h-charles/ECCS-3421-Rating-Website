@@ -8,6 +8,15 @@
 }
 
 /* main style */
+
+#accept-button:hover{
+    background-color: green;
+}
+
+#reject-button:hover{
+    background-color: red;
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
