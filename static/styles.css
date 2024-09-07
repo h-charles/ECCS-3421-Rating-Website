@@ -11,12 +11,10 @@
 
 #accept-button:hover{
     background-color: green;
-    border: 3px solid black;
 }
 
 #reject-button:hover{
     background-color: red;
-    border: 3px solid black;
 }
 
 #accept-button{
