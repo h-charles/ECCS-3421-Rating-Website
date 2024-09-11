@@ -28,6 +28,7 @@ def read_data( row ):
 
     data = df.iloc[int(row), :].to_json()
     server_log( 'read-in', f'Reading row: {row}' )
+    print(data)
     return data
 
 # ====================== #
