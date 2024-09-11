@@ -10,6 +10,7 @@ Base Functionality
 
 Extra Features
 
-- [ ] some method of seeing preiousy accepted products
+- [ ] some method of seeing preiousy accepted products and clearing it
 - [ ] image of product from url, maybe url embed?
+- [ ] dark mode, or other customization options
 - [ ] other thing
