@@ -3,11 +3,13 @@
 
 from flask import Flask, render_template, jsonify
 from datetime import datetime
+import pandas as pd
 
 # ====================== #
 # Global Declarations    #
 # ====================== #
 
+df = pd.read_csv("./static/Files/skincare_products_clean.csv")
 app = Flask( __name__ )
 
 # ====================== #
@@ -23,10 +25,10 @@ def index():
 # data read in
 @app.route( '/read/<row>' )
 def read_data( row ):
-    
-    data = 0
-    
-    return jsonify( data )
+
+    data = df.iloc[int(row), :].to_json()
+    server_log( 'read-in', f'Reading row: {row}' )
+    return data
 
 # ====================== #
 # Helper Functions       #
