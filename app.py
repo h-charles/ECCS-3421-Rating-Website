@@ -13,7 +13,6 @@ import ast
 
 df = pd.read_csv("./static/Files/skincare_products_clean.csv")
 app = Flask( __name__ )
-df = pd.read_csv('skincare_products_clean.csv')
 
 # ====================== #
 # Website Routes         #
@@ -31,7 +30,6 @@ def read_data( row ):
     
     server_log( 'read-in', 'Translating ingreds' ) 
 
-
     
     ingreds =  df['clean_ingreds'][int(row)]
     ingreds = ast.literal_eval(ingreds)
@@ -41,18 +39,13 @@ def read_data( row ):
     
     server_log( 'read-in', f'Reading row: {row}' ) 
     data = df.iloc[int(row), :].to_json()
-       
-    print(data)
+    
         
     return data
 
 # ====================== #
 # Helper Functions       #
 # ====================== #
-
-dataset = pd.read_csv('skincare_products_clean.csv')
-x = dataset.iloc[:, :-1].values
-y = dataset.iloc[:,4].values
 
 
 def server_log( source, message ):
