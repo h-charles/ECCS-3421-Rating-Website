@@ -7,6 +7,7 @@ Base Functionality
 - [x] dom start, accept(), and reject() js functions call for new data
 - [x] some js to load data into html
 - [ ] css to make it all look less trash
+- [x] Uninstall python and anaconda from henry's computer, please
 
 Extra Features
 

@@ -8,20 +8,41 @@
 }
 
 /* main style */
+
+#accept-button:hover{
+    background-color: green;
+}
+
+#reject-button:hover{
+    background-color: red;
+}
+
+#accept-button{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#reject-button{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Verdana, sans-serif, B;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     background-color: var(--primary-background);
     color: var(--text);
+    background-color:rgba(144, 137, 140, .2);
 }
 
 #card {
     padding: 15px;
     border: 5px solid var(--text);
     border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color:rgba(144, 137, 140, .3);
 }
 
 p {
