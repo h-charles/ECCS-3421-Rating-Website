@@ -4,6 +4,7 @@
 from flask import Flask, render_template, jsonify
 from datetime import datetime
 import pandas as pd
+import ast
 
 # ====================== #
 # Global Declarations    #
@@ -19,16 +20,26 @@ app = Flask( __name__ )
 # home page
 @app.route( '/' )
 def index():
-    server_log( 'index', 'Rendering Main index.html')
+    server_log( 'index', 'Rendering Main index.html' )
     return render_template( 'index.html' )
 
 # data read in
 @app.route( '/read/<row>' )
 def read_data( row ):
+    
+    server_log( 'read-in', 'Translating ingreds' ) 
+    
+    ingreds =  df['clean_ingreds'][int(row)]
+    ingreds = ast.literal_eval(ingreds)
 
+    df['clean_ingreds'][int(row)] = ingreds[0:5]
+
+    
+    server_log( 'read-in', f'Reading row: {row}' ) 
     data = df.iloc[int(row), :].to_json()
-    server_log( 'read-in', f'Reading row: {row}' )
+       
     print(data)
+        
     return data
 
 # ====================== #
