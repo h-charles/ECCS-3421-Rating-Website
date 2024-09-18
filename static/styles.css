@@ -23,6 +23,7 @@
 
 #reject-button{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
 }
 
 
@@ -43,6 +44,8 @@ body {
     border-radius: 5px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     background-color:rgba(144, 137, 140, .3);
+    
+
 }
 
 p {
@@ -59,6 +62,9 @@ li {
     display: flex;
     flex-direction: row;
     gap: 25px;
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 20px;
+    
 }
 
 button {
