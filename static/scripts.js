@@ -32,6 +32,13 @@ function accept() {
     data_transfer()
 }
 
+function clearlist(){
+    const list = document.getElementById('like-list')
+    while (list.firstChild) {
+        list.removeChild(list.firstChild);
+    }
+}
+
 // Helper Functions
 function data_transfer() {
     fetch(`/read/${shuffled_rows[row_num]}`)
